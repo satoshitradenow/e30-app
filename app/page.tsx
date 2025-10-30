@@ -2,6 +2,13 @@
 import { useState } from 'react';
 import { ethers } from 'ethers';
 
+// Add Ethereum to window for TypeScript
+declare global {
+  interface Window {
+    ethereum?: any;
+  }
+}
+
 export default function E30App() {
   const [connected, setConnected] = useState(false);
   const [amount, setAmount] = useState('');
